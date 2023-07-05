@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen</title>
+</head>
+
+<body>
+
+    <div style="text-align: center; vertical-align: middle; margin-top: 10%;">
+        <h2>Carrito de compras</h2>
+        <hr/>
+        <h4>Captura de producto</h4>
+        <form method="POST">
+            <label for="nombre">Nombre:</label>
+            <input id="nombre" name="nombre" type="text" required/>
+            <br />
+            <br />
+            <label for="precio">Precio unitario:</label>
+            <input id="precio" name="precio" type="number" required/>
+            <br />
+            <br />
+            <label for="cantidad">Cantidad:</label>
+            <input id="cantidad" name="cantidad" type="number" required/>
+            <br />
+            <br />
+            <button type="button" onclick="agregarCarrito()">Agregar al carrito</button>
+        </form>
+
+        <hr/>
+        
+        <h4>Productos</h4>
+        <table style="margin-left: 35%;" border="1">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Producto</th>
+                    <th>Precio unitario</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="tbodyCarrito">
+              
+            </tbody>
+
+        </table>
+        <br/>
+        <br/>
+        <button type="button" onclick="cerrarCarrito()"> Cerrar carrito</button>
+
+        <div style="margin-top: 5%;">
+            <hr/>
+            <h4>Totales</h4>
+            <strong>Folio: </strong><label id="folio"></label>
+            <br/>
+            <br/>
+            <strong>Subtotal: </strong><label id="subtotal">0</label>
+            <br/>
+            <br/>
+            <strong>IVA 16%: </strong><label id="iva">0</label>
+            <br/>
+            <br/>
+            <strong>Total: </strong> <label id="total">0</label>
+        </div>
+        
+
+    </div>
+
+</body>
+
+<script src="carrito.js"></script>
+
+</html>
